@@ -25,6 +25,7 @@ img, picture, svg, video {
 
 
 /* ---- ATOMS ---- */
+
 /* Font Atoms */
 :root {
   font-family: "Roboto Mono", monospace;
@@ -32,6 +33,7 @@ img, picture, svg, video {
   font-weight: 300;
   font-style: normal;
   font-size: 16px;
+  color: light-dark(var(--neutral-950), var(--neutral-100));
 }
 
 /* Colour Atoms */

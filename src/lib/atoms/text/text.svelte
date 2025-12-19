@@ -20,22 +20,22 @@
 
 <style>
     .text--headline {
-        font-weight: 500;
+        font-weight: 700;
         font-size: 48px;
     }
 
     .text--subtitle {
-        font-weight: 300;
+        font-weight: 500;
         font-size: 36px;
     }
 
     .text--body {
-        font-weight: 100;
+        font-weight: 300;
         font-size: 16px;
     }
 
     .text--body-plus {
-        font-weight: 100;
+        font-weight: 300;
         font-size: 18px;
     }
 </style>
