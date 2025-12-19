@@ -3,8 +3,11 @@
 	import '$lib/utils/ecmc.css'
 </script>
 
-<div class="test">
-	<Text>hello mono!</Text>
+<div class="text">
+	<Text variant="headline">hello mono!</Text>
+	<Text variant="subtitle">hello mono!</Text>
+	<Text variant="bodyPlus">hello mono!</Text>
+	<Text variant="body">hello mono!</Text>
 </div>
 
 <style>
