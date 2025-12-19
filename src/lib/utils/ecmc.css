@@ -1,5 +1,4 @@
-@import "../atoms/atoms.css";
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -22,4 +21,30 @@ html {
 img, picture, svg, video {
     display: block;
     max-width: 100%;
+}
+
+
+/* ---- ATOMS ---- */
+/* Font Atoms */
+:root {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
+}
+
+/* Colour Atoms */
+:root {
+  --neutral-950: #0B090A;
+  --neutral-900: #161A1D;
+  --neutral-400: #B1A7A6;
+  --neutral-300: #D3D3D3;
+  --neutral-100: #F5F3F4;
+  --neutral-50: #FFFFFF;
+
+  --red-900: #660708;
+  --red-700: #A4161A;
+  --red-600: #BA181B;
+  --red-500: #E5383B;
 }
