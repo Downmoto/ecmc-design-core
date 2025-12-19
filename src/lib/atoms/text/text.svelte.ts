@@ -32,6 +32,7 @@ export interface TextProps extends HTMLAttributes<HTMLElement> {
 
 	/**
 	 * Whether the text should display inline (span) or block-level (div)
+	 * @default false
 	 */
 	inline?: boolean;
 }
@@ -54,19 +55,4 @@ export const textVariantClasses = {
 	subtitle: 'text--subtitle',
 	body: 'text--body',
 	bodyPlus: 'text--body-plus'
-} as const;
-
-export const textItalicClass = {
-	'true': 'text--italic',
-	'false': ''
-} as const;
-
-export const textWeightClasses = {
-	100: 'text--100',
-	200: 'text--200',
-	300: 'text--300',
-	400: 'text--400',
-	500: 'text--500',
-	600: 'text--600',
-	700: 'text--700',
 } as const;

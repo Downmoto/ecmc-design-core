@@ -1,12 +1,7 @@
 <script lang="ts">
 	import { cn } from '../../utils/cn.ts';
 	import type { TextProps } from './text.svelte.ts';
-	import {
-		defaultProps,
-		textVariantClasses,
-		textItalicClass,
-		textWeightClasses
-	} from './text.svelte.ts';
+	import { defaultProps, textVariantClasses } from './text.svelte.ts';
 
 	// Props with defaults
 	let {
@@ -20,21 +15,16 @@
 	}: TextProps = $props();
 
 	let computedClasses = $derived(
-		cn(
-			className,
-			textVariantClasses[variant],
-			textItalicClass[String(italic) as keyof typeof textItalicClass],
-			textWeightClasses[weight]
-		)
+		cn(className, textVariantClasses[variant], italic ? 'text--italic' : '')
 	);
 </script>
 
 {#if inline}
-	<span class={computedClasses} {...restProps}>
+	<span class={computedClasses} style="font-weight: {weight};" {...restProps}>
 		{@render children?.()}
 	</span>
 {:else}
-	<div class={computedClasses} {...restProps}>
+	<div class={computedClasses} style="font-weight: {weight};" {...restProps}>
 		{@render children?.()}
 	</div>
 {/if}
@@ -62,33 +52,5 @@
 
 	.text--italic {
 		font-style: italic;
-	}
-
-	.text--100 {
-		font-weight: 100;
-	}
-
-	.text--200 {
-		font-weight: 200;
-	}
-
-	.text--300 {
-		font-weight: 300;
-	}
-
-	.text--400 {
-		font-weight: 400;
-	}
-
-	.text--500 {
-		font-weight: 500;
-	}
-
-	.text--600 {
-		font-weight: 600;
-	}
-
-	.text--700 {
-		font-weight: 700;
 	}
 </style>
