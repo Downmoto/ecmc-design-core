@@ -8,11 +8,6 @@ export interface TextProps extends HTMLAttributes<HTMLElement> {
 	children?: Snippet;
 
 	/**
-	 * Additional CSS classes to apply to the text
-	 */
-	class?: string;
-
-	/**
 	 * Text variant that determines the size and weight styling
 	 * @default 'body'
 	 */

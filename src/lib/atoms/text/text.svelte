@@ -6,7 +6,6 @@
 	// Props with defaults
 	let {
 		children,
-		class: className = '',
 		variant = defaultProps.variant!,
 		italic = defaultProps.italic!,
 		weight = defaultProps.weight!,
@@ -15,7 +14,7 @@
 	}: TextProps = $props();
 
 	let computedClasses = $derived(
-		cn(className, textVariantClasses[variant], italic ? 'text--italic' : '')
+		cn(textVariantClasses[variant], italic ? 'text--italic' : '')
 	);
 </script>
 

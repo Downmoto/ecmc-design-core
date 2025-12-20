@@ -48,11 +48,6 @@ export interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
 	children?: Snippet;
 
 	/**
-	 * Additional CSS classes to apply to the container
-	 */
-	class?: string;
-
-	/**
 	 * Opinionated padding options using y = x + 8 formula up to 64px
 	 * xsm = 8px, sm = 16px, md = 24px, lg = 32px, xl = 64px
 	 */

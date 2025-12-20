@@ -6,13 +6,12 @@
 	// Props with defaults
 	let {
 		children,
-		class: className = '',
 		padding = defaultProps.padding!,
 		metrics = $bindable(),
 		...restProps
 	}: ContainerProps = $props();
 
-	let computedClasses = $derived(cn(className, paddingClasses[padding]));
+	let computedClasses = $derived(cn(paddingClasses[padding]));
 
 	// Container element reference
 	let containerElement: HTMLDivElement;
