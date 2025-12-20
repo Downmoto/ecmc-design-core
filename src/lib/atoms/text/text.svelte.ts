@@ -6,7 +6,7 @@ export interface TextProps extends HTMLAttributes<HTMLElement> {
 	 * The content to be rendered inside the text
 	 */
 	children?: Snippet;
-	
+
 	/**
 	 * Additional CSS classes to apply to the text
 	 */
@@ -22,7 +22,7 @@ export interface TextProps extends HTMLAttributes<HTMLElement> {
 	 * Whether the text should be rendered in italic style
 	 * @default false
 	 */
-	italic?: boolean,
+	italic?: boolean;
 
 	/**
 	 * Font weight for the text (overrides variant default weight)

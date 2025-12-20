@@ -10,19 +10,19 @@ export interface ContainerMetrics {
 	 */
 	width: number;
 	height: number;
-	
+
 	/**
 	 * Element position relative to viewport
 	 */
 	top: number;
 	left: number;
-	
+
 	/**
 	 * Element position relative to positioned parent
 	 */
 	offsetTop: number;
 	offsetLeft: number;
-	
+
 	/**
 	 * Scroll dimensions and position
 	 */
@@ -30,7 +30,7 @@ export interface ContainerMetrics {
 	scrollHeight: number;
 	scrollTop: number;
 	scrollLeft: number;
-	
+
 	/**
 	 * Client dimensions (excluding scrollbar)
 	 */
@@ -46,7 +46,7 @@ export interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
 	 * The content to be rendered inside the container
 	 */
 	children?: Snippet;
-	
+
 	/**
 	 * Additional CSS classes to apply to the container
 	 */
@@ -57,12 +57,12 @@ export interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
 	 * xsm = 8px, sm = 16px, md = 24px, lg = 32px, xl = 64px
 	 */
 	padding?: 'xsm' | 'sm' | 'md' | 'lg' | 'xl';
-	
+
 	/**
 	 * Optional bound prop to track container element metrics
 	 * Use bind:metrics={yourVariable} to access container dimensions and position
 	 */
-	metrics?: ContainerMetrics;
+	metrics?: ContainerMetrics | undefined;
 }
 
 /**
@@ -77,9 +77,8 @@ export const defaultProps: Partial<ContainerProps> = {
  */
 export const paddingClasses = {
 	xsm: 'container--padding-xsm',
-	sm: 'container--padding-sm', 
+	sm: 'container--padding-sm',
 	md: 'container--padding-md',
 	lg: 'container--padding-lg',
 	xl: 'container--padding-xl'
 } as const;
-

@@ -4,8 +4,5 @@
  * @returns Merged class string
  */
 export function cn(...classes: (string | undefined | null | boolean)[]): string {
-	return classes
-		.filter(Boolean)
-		.join(' ')
-		.trim();
+	return classes.filter(Boolean).join(' ').trim();
 }

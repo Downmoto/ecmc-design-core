@@ -1,52 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    font: inherit;
+	margin: 0;
+	padding: 0;
+	font: inherit;
 }
 
 body {
-    min-height: 100vh;
+	min-height: 100vh;
 }
 
 html {
-    color-scheme: dark light;
+	color-scheme: dark light;
 }
 
-img, picture, svg, video {
-    display: block;
-    max-width: 100%;
+img,
+picture,
+svg,
+video {
+	display: block;
+	max-width: 100%;
 }
-
 
 /* ---- ATOMS ---- */
 
 /* Font Atoms */
 :root {
-  font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 16px;
-  color: light-dark(var(--neutral-950), var(--neutral-100));
+	font-family: 'Roboto Mono', monospace;
+	font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 16px;
+	color: light-dark(var(--neutral-950), var(--neutral-100));
 }
 
 /* Colour Atoms */
 :root {
-  --neutral-950: #0B090A;
-  --neutral-900: #161A1D;
-  --neutral-400: #B1A7A6;
-  --neutral-300: #D3D3D3;
-  --neutral-100: #F5F3F4;
-  --neutral-50: #FFFFFF;
+	--neutral-950: #0b090a;
+	--neutral-900: #161a1d;
+	--neutral-400: #b1a7a6;
+	--neutral-300: #d3d3d3;
+	--neutral-100: #f5f3f4;
+	--neutral-50: #ffffff;
 
-  --red-900: #660708;
-  --red-700: #A4161A;
-  --red-600: #BA181B;
-  --red-500: #E5383B;
+	--red-900: #660708;
+	--red-700: #a4161a;
+	--red-600: #ba181b;
+	--red-500: #e5383b;
 }

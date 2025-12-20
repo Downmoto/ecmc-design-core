@@ -1,30 +1,28 @@
 <script lang="ts">
 	import { cn } from '../../utils/cn.ts';
 	import type { ContainerProps } from './container.svelte.ts';
-	import { defaultProps, paddingClasses, type ContainerMetrics } from './container.svelte.ts';
+	import { defaultProps, paddingClasses } from './container.svelte.ts';
 
 	// Props with defaults
-	let { 
-		children, 
-		class: className = '', 
+	let {
+		children,
+		class: className = '',
 		padding = defaultProps.padding,
 		metrics = $bindable(),
-		...restProps 
+		...restProps
 	}: ContainerProps = $props();
 
-	let computedClasses = $derived(
-		cn(className, padding ? paddingClasses[padding] : '')
-	);
-	
+	let computedClasses = $derived(cn(className, padding ? paddingClasses[padding] : ''));
+
 	// Container element reference
 	let containerElement: HTMLDivElement;
-	
+
 	// Update metrics when element changes or on resize/scroll
 	function updateMetrics() {
 		if (!containerElement) return;
-		
+
 		const rect = containerElement.getBoundingClientRect();
-		
+
 		// Create a new metrics object to trigger reactivity
 		metrics = {
 			width: rect.width,
@@ -41,31 +39,32 @@
 			clientHeight: containerElement.clientHeight
 		};
 	}
-	
+
 	// Initialize metrics when element is bound
 	$effect(() => {
 		if (containerElement) {
 			updateMetrics();
-			
+
 			// Create ResizeObserver to track size changes
 			const resizeObserver = new ResizeObserver(() => {
 				updateMetrics();
 			});
-			
+
 			resizeObserver.observe(containerElement);
 			containerElement.addEventListener('scroll', updateMetrics);
-			
+
 			// Cleanup function
 			return () => {
 				resizeObserver.disconnect();
 				containerElement.removeEventListener('scroll', updateMetrics);
 			};
 		}
+		return () => {}; // Explicit return for when containerElement is not available
 	});
 </script>
 
 <div bind:this={containerElement} class={computedClasses} {...restProps}>
-    {@render children?.()}
+	{@render children?.()}
 </div>
 
 <style>
