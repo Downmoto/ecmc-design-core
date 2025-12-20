@@ -13,9 +13,7 @@
 		...restProps
 	}: TextProps = $props();
 
-	let computedClasses = $derived(
-		cn(textVariantClasses[variant], italic ? 'text--italic' : '')
-	);
+	let computedClasses = $derived(cn(textVariantClasses[variant], italic ? 'text--italic' : ''));
 </script>
 
 {#if inline}
