@@ -7,12 +7,12 @@
 	let {
 		children,
 		class: className = '',
-		padding = defaultProps.padding,
+		padding = defaultProps.padding!,
 		metrics = $bindable(),
 		...restProps
 	}: ContainerProps = $props();
 
-	let computedClasses = $derived(cn(className, padding ? paddingClasses[padding] : ''));
+	let computedClasses = $derived(cn(className, paddingClasses[padding]));
 
 	// Container element reference
 	let containerElement: HTMLDivElement;
