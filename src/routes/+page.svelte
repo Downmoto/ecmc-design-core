@@ -1,22 +1,26 @@
 <script lang="ts">
-	import { Text, HBox, VBox, GridBox, Centered, type ContainerMetrics } from '$lib/index.js';
+	import { Text, Container, type ContainerMetrics } from '$lib/index.js';
 	import '$lib/utils/ecmc.css';
 
 	let containerMetrics: ContainerMetrics | undefined;
 </script>
 
-<VBox gap="md" padding="lg">
+<Container.VBox gap="md" padding="lg">
 	<Text variant="headline">Layout Components Demo</Text>
 
-	<VBox gap="sm">
+	<Container.VBox gap="sm">
 		<Text variant="subtitle">HBox - Horizontal Layout</Text>
-		<HBox gap="md" padding="md" style="border: 1px solid var(--neutral-100); border-radius: 5px;">
+		<Container.HBox
+			gap="md"
+			padding="md"
+			style="border: 1px solid var(--neutral-100); border-radius: 5px;"
+		>
 			<Text>Item 1</Text>
 			<Text>Item 2</Text>
 			<Text>Item 3</Text>
-		</HBox>
+		</Container.HBox>
 
-		<HBox
+		<Container.HBox
 			gap="sm"
 			justify="space-between"
 			padding="sm"
@@ -25,9 +29,9 @@
 			<Text>Start</Text>
 			<Text>Space Between</Text>
 			<Text>End</Text>
-		</HBox>
+		</Container.HBox>
 
-		<HBox
+		<Container.HBox
 			gap="md"
 			wrap={true}
 			padding="md"
@@ -40,18 +44,22 @@
 			<Text>Gets</Text>
 			<Text>Too</Text>
 			<Text>Small</Text>
-		</HBox>
-	</VBox>
+		</Container.HBox>
+	</Container.VBox>
 
-	<VBox gap="sm">
+	<Container.VBox gap="sm">
 		<Text variant="subtitle">VBox - Vertical Layout</Text>
-		<VBox gap="md" padding="md" style="border: 1px solid var(--neutral-100); border-radius: 5px;">
+		<Container.VBox
+			gap="md"
+			padding="md"
+			style="border: 1px solid var(--neutral-100); border-radius: 5px;"
+		>
 			<Text>Item 1</Text>
 			<Text>Item 2</Text>
 			<Text>Item 3</Text>
-		</VBox>
+		</Container.VBox>
 
-		<VBox
+		<Container.VBox
 			gap="sm"
 			align="center"
 			padding="sm"
@@ -59,12 +67,12 @@
 		>
 			<Text>Centered</Text>
 			<Text>Alignment</Text>
-		</VBox>
-	</VBox>
+		</Container.VBox>
+	</Container.VBox>
 
-	<VBox gap="sm">
+	<Container.VBox gap="sm">
 		<Text variant="subtitle">GridBox - Grid Layout</Text>
-		<GridBox
+		<Container.GridBox
 			columns={3}
 			gap="md"
 			padding="md"
@@ -76,9 +84,9 @@
 			<Text>Cell 4</Text>
 			<Text>Cell 5</Text>
 			<Text>Cell 6</Text>
-		</GridBox>
+		</Container.GridBox>
 
-		<GridBox
+		<Container.GridBox
 			columns="200px 1fr 1fr"
 			gap="sm"
 			padding="sm"
@@ -87,31 +95,35 @@
 			<Text>200px</Text>
 			<Text>1fr</Text>
 			<Text>1fr</Text>
-		</GridBox>
-	</VBox>
+		</Container.GridBox>
+	</Container.VBox>
 
-	<VBox gap="sm">
+	<Container.VBox gap="sm">
 		<Text variant="subtitle">Centered - Center Alignment</Text>
-		<Centered
+		<Container.Centered
 			padding="md"
 			style="border: 1px solid var(--neutral-100); border-radius: 5px; height: 200px;"
 		>
 			<Text>Fully Centered Content</Text>
-		</Centered>
+		</Container.Centered>
 
-		<Centered
+		<Container.Centered
 			horizontal={true}
 			vertical={false}
 			padding="md"
 			style="border: 1px solid var(--neutral-100); border-radius: 5px; height: 100px;"
 		>
 			<Text>Horizontally Centered Only</Text>
-		</Centered>
-	</VBox>
+		</Container.Centered>
+	</Container.VBox>
 
-	<VBox gap="sm" bind:metrics={containerMetrics}>
+	<Container.VBox gap="sm" bind:metrics={containerMetrics}>
 		<Text variant="subtitle">Metrics Tracking</Text>
-		<HBox gap="md" padding="md" style="border: 1px solid var(--neutral-100); border-radius: 5px;">
+		<Container.HBox
+			gap="md"
+			padding="md"
+			style="border: 1px solid var(--neutral-100); border-radius: 5px;"
+		>
 			<Text>Container with metrics</Text>
 			{#if containerMetrics}
 				<Text variant="body"
@@ -120,6 +132,6 @@
 					)}px</Text
 				>
 			{/if}
-		</HBox>
-	</VBox>
-</VBox>
+		</Container.HBox>
+	</Container.VBox>
+</Container.VBox>
