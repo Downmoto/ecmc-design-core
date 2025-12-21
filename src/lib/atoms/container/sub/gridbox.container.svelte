@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Container from '../container.svelte';
-	import type { ContainerProps } from '../container.svelte.ts';
+	import type { ContainerProps } from '../container.svelte.js';
 
 	interface GridBoxProps extends ContainerProps {
 		columns?: number | string;
