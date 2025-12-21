@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Container from '../container.svelte';
-	import type { ContainerProps } from '../container.svelte.ts';
+	import type { ContainerProps } from '../index.ts';
 
 	interface CenteredProps extends ContainerProps {
 		horizontal?: boolean;

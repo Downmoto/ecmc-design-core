@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { cn } from '../../utils/cn.ts';
-	import type { ContainerProps } from './container.svelte.ts';
-	import { defaultProps, paddingClasses } from './container.svelte.ts';
+	import type { ContainerProps } from './index.ts';
+	import { defaultProps, paddingClasses } from './index.ts';
 
 	// Props with defaults
 	let {
