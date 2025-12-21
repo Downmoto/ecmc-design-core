@@ -1,6 +1,33 @@
 import type { Snippet } from 'svelte';
 import type { HTMLAttributes } from 'svelte/elements';
 
+export interface BoxProps extends ContainerProps {
+	gap?: 'xsm' | 'sm' | 'md' | 'lg' | 'xl';
+	align?: 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline';
+	justify?:
+		| 'flex-start'
+		| 'center'
+		| 'flex-end'
+		| 'space-between'
+		| 'space-around'
+		| 'space-evenly';
+	wrap?: boolean;
+}
+export interface InternalBoxProps extends BoxProps {
+	variant: 'horizontal' | 'vertical';
+}
+
+export interface CenteredProps extends ContainerProps {
+	horizontal?: boolean;
+	vertical?: boolean;
+}
+
+export interface GridBoxProps extends ContainerProps {
+	columns?: number | string;
+	gap?: 'xsm' | 'sm' | 'md' | 'lg' | 'xl';
+	autoFlow?: 'row' | 'column' | 'dense' | 'row dense' | 'column dense';
+}
+
 /**
  * Container metrics interface for tracking div element properties
  */
@@ -39,7 +66,7 @@ export interface ContainerMetrics {
 }
 
 /**
- * Container component props interface
+ * Container atom props interface
  */
 export interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
 	/**
@@ -59,21 +86,3 @@ export interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
 	 */
 	metrics?: ContainerMetrics | undefined;
 }
-
-/**
- * Default props for the container atom
- */
-export const defaultProps: Partial<ContainerProps> = {
-	padding: 'md'
-};
-
-/**
- * CSS class mappings for padding variants
- */
-export const paddingClasses = {
-	xsm: 'container--padding-xsm',
-	sm: 'container--padding-sm',
-	md: 'container--padding-md',
-	lg: 'container--padding-lg',
-	xl: 'container--padding-xl'
-} as const;

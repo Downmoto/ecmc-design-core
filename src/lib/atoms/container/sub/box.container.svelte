@@ -1,26 +1,6 @@
-<script lang="ts" module>
-	import type { ContainerProps } from '../index.ts';
-
-	export interface BoxProps extends ContainerProps {
-		gap?: 'xsm' | 'sm' | 'md' | 'lg' | 'xl';
-		align?: 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline';
-		justify?:
-			| 'flex-start'
-			| 'center'
-			| 'flex-end'
-			| 'space-between'
-			| 'space-around'
-			| 'space-evenly';
-		wrap?: boolean;
-	}
-</script>
-
 <script lang="ts">
 	import Container from '../container.svelte';
-
-	interface InternalBoxProps extends BoxProps {
-		variant: 'horizontal' | 'vertical';
-	}
+	import type { InternalBoxProps } from '../types.js';
 
 	let {
 		children,

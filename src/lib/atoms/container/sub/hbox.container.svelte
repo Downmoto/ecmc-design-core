@@ -1,5 +1,6 @@
 <script lang="ts">
-	import Box, { type BoxProps } from './box.container.svelte';
+	import Box from './box.container.svelte';
+	import type { BoxProps } from '../types.js';
 
 	let { metrics = $bindable(), ...props }: BoxProps = $props();
 </script>

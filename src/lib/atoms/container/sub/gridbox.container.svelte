@@ -1,12 +1,6 @@
 <script lang="ts">
 	import Container from '../container.svelte';
-	import type { ContainerProps } from '../index.ts';
-
-	interface GridBoxProps extends ContainerProps {
-		columns?: number | string;
-		gap?: 'xsm' | 'sm' | 'md' | 'lg' | 'xl';
-		autoFlow?: 'row' | 'column' | 'dense' | 'row dense' | 'column dense';
-	}
+	import type { GridBoxProps } from '../types.js';
 
 	let {
 		children,

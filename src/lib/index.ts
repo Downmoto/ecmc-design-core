@@ -1,6 +1,6 @@
 // Reexport your entry components here
 export { default as Container } from './atoms/container/container.svelte';
-export type { ContainerProps, ContainerMetrics } from './atoms/container/index.ts';
+export type { ContainerProps, ContainerMetrics } from './atoms/container/types.ts';
 
 // Reexport sub-containers
 export { default as HBox } from './atoms/container/sub/hbox.container.svelte';
