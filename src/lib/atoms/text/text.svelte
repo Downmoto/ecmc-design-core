@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { cn } from '../../utils/cn.ts';
-	import type { TextProps } from './index.ts';
-	import { defaultProps, textVariantClasses } from './index.ts';
+	import type { TextProps } from './types.ts';
+	import { defaultProps, textVariantClasses } from './constants.ts';
 
 	// Props with defaults
 	let {

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { cn } from '../../utils/cn.ts';
-	import type { ContainerProps } from './types.js';
+	import type { ContainerProps } from './types.ts';
 	import { defaultProps, paddingClasses } from './constants.ts';
 
 	// Props with defaults
