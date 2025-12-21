@@ -1,7 +1,12 @@
 {
 	"name": "ecmc-design-core",
+	"description": "Atoms and molecules for ecmc design system",
 	"license": "MIT",
 	"version": "0.0.1-dev",
+	"author": {
+		"name": "Arad Fadaei",
+		"url": "https://www.fadaei.dev"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && bun run prepack",
