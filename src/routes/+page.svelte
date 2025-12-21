@@ -1,69 +1,89 @@
 <script lang="ts">
-	import { Text, Container, type ContainerMetrics } from '$lib/index.js';
+	import { Text, HBox, VBox, GridBox, Centered, type ContainerMetrics } from '$lib/index.js';
 	import '$lib/utils/ecmc.css';
 
 	let containerMetrics: ContainerMetrics | undefined;
 </script>
 
-<div class="text">
-	<Text variant="headline">hello mono! headline</Text>
-	<Text variant="subtitle">hello mono! subtitle</Text>
-	<Text variant="bodyPlus">hello mono! bodyplus</Text>
-	<Text variant="body">hello mono! body</Text>
+<VBox gap="md" padding="lg">
+	<Text variant="headline">Layout Components Demo</Text>
 
-	<Text weight={500}>hello <Text weight={700} inline>mono!</Text></Text>
-	<Text variant="body" weight={700} italic>hello mono!</Text>
-</div>
+	<VBox gap="sm">
+		<Text variant="subtitle">HBox - Horizontal Layout</Text>
+		<HBox gap="md" padding="md" style="border: 1px solid var(--neutral-100); border-radius: 5px;">
+			<Text>Item 1</Text>
+			<Text>Item 2</Text>
+			<Text>Item 3</Text>
+		</HBox>
 
-<div class="containers">
-	<Text variant="headline">Container Examples</Text>
+		<HBox gap="sm" justify="space-between" padding="sm" style="border: 1px solid var(--neutral-100); border-radius: 5px;">
+			<Text>Start</Text>
+			<Text>Space Between</Text>
+			<Text>End</Text>
+		</HBox>
 
-	<Container padding="xsm">
-		<Text>Container with xsm padding (8px)</Text>
-	</Container>
+		<HBox gap="md" wrap={true} padding="md" style="border: 1px solid var(--neutral-100); border-radius: 5px; max-width: 400px;">
+			<Text>Wrapping</Text>
+			<Text>Items</Text>
+			<Text>When</Text>
+			<Text>Container</Text>
+			<Text>Gets</Text>
+			<Text>Too</Text>
+			<Text>Small</Text>
+		</HBox>
+	</VBox>
 
-	<Container padding="sm">
-		<Text>Container with sm padding (16px)</Text>
-	</Container>
+	<VBox gap="sm">
+		<Text variant="subtitle">VBox - Vertical Layout</Text>
+		<VBox gap="md" padding="md" style="border: 1px solid var(--neutral-100); border-radius: 5px;">
+			<Text>Item 1</Text>
+			<Text>Item 2</Text>
+			<Text>Item 3</Text>
+		</VBox>
 
-	<Container padding="md">
-		<Text>Container with md padding (24px)</Text>
-	</Container>
+		<VBox gap="sm" align="center" padding="sm" style="border: 1px solid var(--neutral-100); border-radius: 5px;">
+			<Text>Centered</Text>
+			<Text>Alignment</Text>
+		</VBox>
+	</VBox>
 
-	<Container padding="lg">
-		<Text>Container with lg padding (32px)</Text>
-	</Container>
+	<VBox gap="sm">
+		<Text variant="subtitle">GridBox - Grid Layout</Text>
+		<GridBox columns={3} gap="md" padding="md" style="border: 1px solid var(--neutral-100); border-radius: 5px;">
+			<Text>Cell 1</Text>
+			<Text>Cell 2</Text>
+			<Text>Cell 3</Text>
+			<Text>Cell 4</Text>
+			<Text>Cell 5</Text>
+			<Text>Cell 6</Text>
+		</GridBox>
 
-	<Container padding="xl">
-		<Text>Container with xl padding (64px)</Text>
-	</Container>
+		<GridBox columns="200px 1fr 1fr" gap="sm" padding="sm" style="border: 1px solid var(--neutral-100); border-radius: 5px;">
+			<Text>200px</Text>
+			<Text>1fr</Text>
+			<Text>1fr</Text>
+		</GridBox>
+	</VBox>
 
-	<Container bind:metrics={containerMetrics}>
-		<Text>Container with metrics tracking</Text>
-		{#if containerMetrics}
-			<Text variant="body"
-				>Width: {containerMetrics.width.toFixed(0)}px, Height: {containerMetrics.height.toFixed(
-					0
-				)}px</Text
-			>
-		{/if}
-	</Container>
+	<VBox gap="sm">
+		<Text variant="subtitle">Centered - Center Alignment</Text>
+		<Centered padding="md" style="border: 1px solid var(--neutral-100); border-radius: 5px; height: 200px;">
+			<Text>Fully Centered Content</Text>
+		</Centered>
 
-	<Container padding="md" class="custom-container">
-		<Text>Container with custom styling</Text>
-	</Container>
-</div>
+		<Centered horizontal={true} vertical={false} padding="md" style="border: 1px solid var(--neutral-100); border-radius: 5px; height: 100px;">
+			<Text>Horizontally Centered Only</Text>
+		</Centered>
+	</VBox>
 
-<style>
-	.containers {
-		margin-top: 2rem;
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-	}
+	<VBox gap="sm" bind:metrics={containerMetrics}>
+		<Text variant="subtitle">Metrics Tracking</Text>
+		<HBox gap="md" padding="md" style="border: 1px solid var(--neutral-100); border-radius: 5px;">
+			<Text>Container with metrics</Text>
+			{#if containerMetrics}
+				<Text variant="body">Width: {containerMetrics.width.toFixed(0)}px, Height: {containerMetrics.height.toFixed(0)}px</Text>
+			{/if}
+		</HBox>
+	</VBox>
+</VBox>
 
-	.containers :global([class*='container--padding']) {
-		border: 1px solid var(--neutral-100);
-		border-radius: 5px;
-	}
-</style>

@@ -68,22 +68,22 @@
 
 <style>
 	.container--padding-xsm {
-		padding: 8px;
+		padding: var(--spacing-xsm);
 	}
 
 	.container--padding-sm {
-		padding: 16px;
+		padding: var(--spacing-sm)
 	}
 
 	.container--padding-md {
-		padding: 24px;
+		padding: var(--spacing-md)
 	}
 
 	.container--padding-lg {
-		padding: 32px;
+		padding: var(--spacing-lg)
 	}
 
 	.container--padding-xl {
-		padding: 64px;
+		padding: var(--spacing-xl)
 	}
 </style>
