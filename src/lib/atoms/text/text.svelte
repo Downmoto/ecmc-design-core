@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from '../../utils/cn.js';
+	import { cn } from '../../utils/cn.ts';
 	import type { TextProps } from './index.ts';
 	import { defaultProps, textVariantClasses } from './index.ts';
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from '../../utils/cn.js';
+	import { cn } from '../../utils/cn.ts';
 	import type { ContainerProps } from './index.ts';
 	import { defaultProps, paddingClasses } from './index.ts';
 
