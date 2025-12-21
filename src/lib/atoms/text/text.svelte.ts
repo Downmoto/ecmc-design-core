@@ -33,6 +33,7 @@ export interface TextProps extends HTMLAttributes<HTMLElement> {
 
 	/**
 	 * Text alignment
+	 * Note: 'justify' alignment works best with multi-line text and may not have visible effect on single-line text.
 	 * @default 'left'
 	 */
 	align?: 'left' | 'center' | 'right' | 'justify';
