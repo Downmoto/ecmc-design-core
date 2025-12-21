@@ -20,12 +20,6 @@ export interface TextProps extends HTMLAttributes<HTMLElement> {
 	italic?: boolean;
 
 	/**
-	 * Font weight for the text (overrides variant default weight)
-	 * @default 300
-	 */
-	weight?: 100 | 200 | 300 | 400 | 500 | 600 | 700;
-
-	/**
 	 * Whether the text should display inline (span) or block-level (div)
 	 * @default false
 	 */

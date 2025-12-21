@@ -8,7 +8,6 @@
 		children,
 		variant = defaultProps.variant!,
 		italic = defaultProps.italic!,
-		weight = defaultProps.weight!,
 		inline = defaultProps.inline!,
 		align = defaultProps.align!,
 		...restProps
@@ -20,11 +19,11 @@
 </script>
 
 {#if inline}
-	<span class={computedClasses} style="font-weight: {weight};" {...restProps}>
+	<span class={computedClasses} {...restProps}>
 		{@render children?.()}
 	</span>
 {:else}
-	<div class={computedClasses} style="font-weight: {weight};" {...restProps}>
+	<div class={computedClasses} {...restProps}>
 		{@render children?.()}
 	</div>
 {/if}

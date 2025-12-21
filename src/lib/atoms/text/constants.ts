@@ -6,7 +6,6 @@ import type { TextProps } from './types.js';
 export const defaultProps: Partial<TextProps> = {
 	variant: 'body',
 	italic: false,
-	weight: 300,
 	inline: false,
 	align: 'left'
 } as const;
