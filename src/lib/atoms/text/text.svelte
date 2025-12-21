@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { cn } from '../../utils/cn.js';
-	import type { TextProps } from './text.svelte.js';
-	import { defaultProps, textVariantClasses } from './text.svelte.js';
+	import type { TextProps } from './index.ts';
+	import { defaultProps, textVariantClasses } from './index.ts';
 
 	// Props with defaults
 	let {

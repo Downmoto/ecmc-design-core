@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	import type { ContainerProps } from '../container.svelte.js';
+	import type { ContainerProps } from '../index.ts';
 
 	export interface BoxProps extends ContainerProps {
 		gap?: 'xsm' | 'sm' | 'md' | 'lg' | 'xl';
