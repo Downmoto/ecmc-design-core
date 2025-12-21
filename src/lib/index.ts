@@ -10,6 +10,3 @@ export { default as Centered } from './atoms/container/sub/centered.container.sv
 
 export { default as Text } from './atoms/text/text.svelte';
 export type { TextProps } from './atoms/text/text.svelte.ts';
-
-// Reexport utilities
-export { cn } from './utils/cn.js';
