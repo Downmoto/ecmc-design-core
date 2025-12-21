@@ -30,6 +30,12 @@ export interface TextProps extends HTMLAttributes<HTMLElement> {
 	 * @default false
 	 */
 	inline?: boolean;
+
+	/**
+	 * Text alignment
+	 * @default 'left'
+	 */
+	align?: 'left' | 'center' | 'right' | 'justify';
 }
 
 /**
@@ -39,7 +45,8 @@ export const defaultProps: Partial<TextProps> = {
 	variant: 'body',
 	italic: false,
 	weight: 300,
-	inline: false
+	inline: false,
+	align: 'left'
 };
 
 /**

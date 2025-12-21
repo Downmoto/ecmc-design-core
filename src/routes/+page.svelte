@@ -9,6 +9,23 @@
 	<Text variant="headline">Layout Components Demo</Text>
 
 	<Container.VBox gap="sm">
+		<Text variant="subtitle">Text Alignment</Text>
+		<Container.VBox
+			gap="sm"
+			padding="md"
+			style="border: 1px solid var(--neutral-100); border-radius: 5px;"
+		>
+			<Text align="left">Left aligned text (default)</Text>
+			<Text align="center">Center aligned text</Text>
+			<Text align="right">Right aligned text</Text>
+			<Text align="justify"
+				>Justified text with enough content to demonstrate the justify alignment. This text should
+				stretch to fill the entire width of the container.</Text
+			>
+		</Container.VBox>
+	</Container.VBox>
+
+	<Container.VBox gap="sm">
 		<Text variant="subtitle">HBox - Horizontal Layout</Text>
 		<Container.HBox
 			gap="md"

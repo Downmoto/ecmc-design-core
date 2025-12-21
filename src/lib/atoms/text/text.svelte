@@ -10,6 +10,7 @@
 		italic = defaultProps.italic!,
 		weight = defaultProps.weight!,
 		inline = defaultProps.inline!,
+		align = defaultProps.align!,
 		...restProps
 	}: TextProps = $props();
 
@@ -17,11 +18,11 @@
 </script>
 
 {#if inline}
-	<span class={computedClasses} style="font-weight: {weight};" {...restProps}>
+	<span class={computedClasses} style="font-weight: {weight}; text-align: {align};" {...restProps}>
 		{@render children?.()}
 	</span>
 {:else}
-	<div class={computedClasses} style="font-weight: {weight};" {...restProps}>
+	<div class={computedClasses} style="font-weight: {weight}; text-align: {align};" {...restProps}>
 		{@render children?.()}
 	</div>
 {/if}
