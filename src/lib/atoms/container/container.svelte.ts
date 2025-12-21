@@ -53,7 +53,6 @@ export interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
 	 */
 	padding?: 'xsm' | 'sm' | 'md' | 'lg' | 'xl';
 
-
 	/**
 	 * Optional bound prop to track container element metrics
 	 * Use bind:metrics={yourVariable} to access container dimensions and position

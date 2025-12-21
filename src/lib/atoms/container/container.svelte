@@ -72,18 +72,18 @@
 	}
 
 	.container--padding-sm {
-		padding: var(--spacing-sm)
+		padding: var(--spacing-sm);
 	}
 
 	.container--padding-md {
-		padding: var(--spacing-md)
+		padding: var(--spacing-md);
 	}
 
 	.container--padding-lg {
-		padding: var(--spacing-lg)
+		padding: var(--spacing-lg);
 	}
 
 	.container--padding-xl {
-		padding: var(--spacing-xl)
+		padding: var(--spacing-xl);
 	}
 </style>
