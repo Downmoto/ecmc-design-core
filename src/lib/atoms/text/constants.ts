@@ -7,7 +7,8 @@ export const defaultProps: Partial<TextProps> = {
 	variant: 'body',
 	italic: false,
 	weight: 300,
-	inline: false
+	inline: false,
+	align: 'left'
 } as const;
 
 /**
@@ -18,4 +19,13 @@ export const textVariantClasses = {
 	subtitle: 'text--subtitle',
 	body: 'text--body',
 	bodyPlus: 'text--body-plus'
+} as const;
+
+/**
+ * CSS class mappings for text alignment
+ */
+export const textAlignClasses = {
+	center: 'text--align-center',
+	right: 'text--align-right',
+	left: ''
 } as const;

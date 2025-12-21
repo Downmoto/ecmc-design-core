@@ -30,4 +30,6 @@ export interface TextProps extends HTMLAttributes<HTMLElement> {
 	 * @default false
 	 */
 	inline?: boolean;
+
+	align?: 'right' | 'center' | 'left';
 }

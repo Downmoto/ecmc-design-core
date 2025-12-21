@@ -70,10 +70,10 @@
 			padding="md"
 			style="border: 1px solid var(--neutral-100); border-radius: 5px;"
 		>
-			<Text>Cell 1</Text>
+			<Text align="center">Cell 1</Text>
 			<Text>Cell 2</Text>
 			<Text>Cell 3</Text>
-			<Text>Cell 4</Text>
+			<Text align="right">Cell 4</Text>
 			<Text>Cell 5</Text>
 			<Text>Cell 6</Text>
 		</GridBox>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { cn } from '../../utils/cn.ts';
 	import type { TextProps } from './types.ts';
-	import { defaultProps, textVariantClasses } from './constants.ts';
+	import { defaultProps, textVariantClasses, textAlignClasses } from './constants.ts';
 
 	// Props with defaults
 	let {
@@ -10,10 +10,13 @@
 		italic = defaultProps.italic!,
 		weight = defaultProps.weight!,
 		inline = defaultProps.inline!,
+		align = defaultProps.align!,
 		...restProps
 	}: TextProps = $props();
 
-	let computedClasses = $derived(cn(textVariantClasses[variant], italic ? 'text--italic' : ''));
+	let computedClasses = $derived(
+		cn(textAlignClasses[align], textVariantClasses[variant], italic ? 'text--italic' : '')
+	);
 </script>
 
 {#if inline}
@@ -49,5 +52,13 @@
 
 	.text--italic {
 		font-style: italic;
+	}
+
+	.text--align-center {
+		text-align: center;
+	}
+
+	.text--align-right {
+		text-align: right;
 	}
 </style>
