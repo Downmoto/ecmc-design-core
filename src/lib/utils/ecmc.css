@@ -62,3 +62,8 @@ video {
 	--spacing-lg: 2rem;
 	--spacing-xl: 3rem;
 }
+
+:root {
+	--rounding-size-1: 5px;
+	--rounding-size-2: 15px;
+}

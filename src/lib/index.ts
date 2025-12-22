@@ -10,3 +10,5 @@ export { default as Centered } from './atoms/container/sub/centered.container.sv
 
 export { default as Text } from './atoms/text/text.svelte';
 export type { TextProps } from './atoms/text/types.ts';
+
+export { default as Button } from './molecules/button/button.svelte';

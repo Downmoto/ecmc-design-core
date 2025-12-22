@@ -1,9 +1,19 @@
 <script lang="ts">
-	import { Text, HBox, VBox, GridBox, Centered, type ContainerMetrics } from '$lib/index.js';
+	import {
+		Text,
+		HBox,
+		VBox,
+		GridBox,
+		Centered,
+		Button,
+		type ContainerMetrics
+	} from '$lib/index.js';
 	import '$lib/utils/ecmc.css';
 
 	let containerMetrics: ContainerMetrics | undefined;
 </script>
+
+<Button>Button One</Button>
 
 <VBox gap="md" padding="lg">
 	<Text variant="headline">Layout Components Demo</Text>
