@@ -8,4 +8,4 @@ export const buttonVariantClasses = {
 	primary: 'button--primary',
 	secondary: 'button--secondary',
 	disabled: 'button--disabled'
-};
+} as const;

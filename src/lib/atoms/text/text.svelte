@@ -31,22 +31,22 @@
 <style>
 	.text--headline {
 		font-weight: 700;
-		font-size: 48px;
+		font-size: var(--font-size-4);
 	}
 
 	.text--subtitle {
 		font-weight: 500;
-		font-size: 36px;
-	}
-
-	.text--body {
-		font-weight: 300;
-		font-size: 16px;
+		font-size: var(--font-size-3);
 	}
 
 	.text--body-plus {
 		font-weight: 300;
-		font-size: 18px;
+		font-size: var(--font-size-2);
+	}
+
+	.text--body {
+		font-weight: 300;
+		font-size: var(--font-size-1);
 	}
 
 	.text--italic {

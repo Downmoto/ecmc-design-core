@@ -1,4 +1,6 @@
 // Reexport your entry components here
+
+// Atoms
 export { default as Container } from './atoms/container/container.svelte';
 export type { ContainerProps, ContainerMetrics } from './atoms/container/types.ts';
 
@@ -11,4 +13,5 @@ export { default as Centered } from './atoms/container/sub/centered.container.sv
 export { default as Text } from './atoms/text/text.svelte';
 export type { TextProps } from './atoms/text/types.ts';
 
+// Molecules
 export { default as Button } from './molecules/button/button.svelte';

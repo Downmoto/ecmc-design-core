@@ -12,7 +12,14 @@
 	} from '$lib/index.js';
 	import '$lib/utils/ecmc.css';
 
-	let containerMetrics: ContainerMetrics | undefined;
+	let containerMetrics: ContainerMetrics | undefined = $state();
+
+	let isDark = $state(true);
+
+	function toggleTheme() {
+		isDark = !isDark;
+		document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';
+	}
 </script>
 
 <VBox gap="md" padding="lg">
@@ -29,6 +36,9 @@
 			<Button variant="secondary">Button Two</Button>
 			<Button variant="disabled">Button Disabled</Button>
 		</Hbox>
+		<Button onclick={toggleTheme}>
+			Toggle {isDark ? 'Light' : 'Dark'} Mode
+		</Button>
 	</Vbox>
 
 	<Text variant="headline">Layout Components Demo</Text>

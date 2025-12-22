@@ -5,12 +5,12 @@
 	import { buttonVariantClasses, defaultProps } from './constants.ts';
 	import type { ButtonProps } from './types.d.ts';
 
-	let { children, variant = defaultProps.variant! }: ButtonProps = $props();
+	let { children, onclick, variant = defaultProps.variant! }: ButtonProps = $props();
 
 	let computedClasses = $derived(cn(buttonVariantClasses[variant]));
 </script>
 
-<button class={computedClasses} disabled={variant === 'disabled'}>
+<button class={computedClasses} disabled={variant === 'disabled'} {onclick}>
 	<Centered padding="xsm">
 		<Text>
 			{@render children?.()}

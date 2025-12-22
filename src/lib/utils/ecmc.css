@@ -38,6 +38,11 @@ video {
 	font-style: normal;
 	font-size: 16px;
 	color: light-dark(var(--neutral-950), var(--neutral-100));
+
+	--font-size-1: 1rem;
+	--font-size-2: 1.2rem;
+	--font-size-3: 2.5rem;
+	--font-size-4: 3rem;
 }
 
 /* Colour Atoms */
@@ -55,6 +60,7 @@ video {
 	--red-500: #e5383b;
 }
 
+/* Spacing Atoms */
 :root {
 	--spacing-xsm: 0.5rem;
 	--spacing-sm: 1rem;
@@ -63,6 +69,7 @@ video {
 	--spacing-xl: 3rem;
 }
 
+/* Rounding Atoms */
 :root {
 	--rounding-size-1: 5px;
 	--rounding-size-2: 15px;
