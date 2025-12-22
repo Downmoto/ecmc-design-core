@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Hbox from '$lib/atoms/container/sub/hbox.container.svelte';
+	import Vbox from '$lib/atoms/container/sub/vbox.container.svelte';
 	import {
 		Text,
 		HBox,
@@ -13,9 +15,22 @@
 	let containerMetrics: ContainerMetrics | undefined;
 </script>
 
-<Button>Button One</Button>
-
 <VBox gap="md" padding="lg">
+	<Text variant="headline">Molecules Demo</Text>
+	<Vbox gap="sm">
+		<Text variant="subtitle">Buttons</Text>
+		<Hbox
+			gap="md"
+			padding="md"
+			justify="space-between"
+			style="border: 1px solid var(--neutral-100); border-radius: 5px;"
+		>
+			<Button>Button One</Button>
+			<Button variant="secondary">Button Two</Button>
+			<Button variant="disabled">Button Disabled</Button>
+		</Hbox>
+	</Vbox>
+
 	<Text variant="headline">Layout Components Demo</Text>
 
 	<VBox gap="sm">
