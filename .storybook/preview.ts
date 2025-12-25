@@ -3,6 +3,7 @@ import type { Preview } from '@storybook/sveltekit';
 import '$lib/utils/ecmc.css';
 
 const preview: Preview = {
+	tags: ['autodocs'],
 	parameters: {
 		controls: {
 			matchers: {
