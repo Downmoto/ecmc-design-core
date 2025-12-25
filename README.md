@@ -1,58 +1,55 @@
-# Svelte library
+# ecmc-design-core
 
-Everything you need to build a Svelte library, powered by [`sv`](https://npmjs.com/package/sv).
+Atoms and molecules for the ECMC design system built with Svelte 5.
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
+## Overview
 
-## Creating a project
+This is a component library providing foundational UI components (atoms) and compound components (molecules) for building consistent user interfaces. The library is built with Svelte 5 and includes TypeScript support and Storybook integration.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Development
 
-```sh
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Start the development server:
 
 ```sh
+bun dev
+# or
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+View components in Storybook:
+
+```sh
+bun storybook
+# or
+npm run storybook
+```
+
+The Storybook interface will be available at `http://localhost:6006`.
 
 ## Building
 
-To build your library:
+To build the preview app:
 
 ```sh
-npm pack
-```
-
-To create a production version of your showcase app:
-
-```sh
+bun build
+# or
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+## Scripts
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+- `dev` - Start development server
+- `build` - Build the library for production
+- `storybook` - Launch Storybook development server
+- `build-storybook` - Build Storybook for deployment
+- `lint` - Run linting checks
+- `format` - Format code with Prettier
+- `check` - Run Svelte type checking
 
-## Publishing
+## License
 
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
+MIT
 
-To publish your library to [npm](https://www.npmjs.com):
+## Author
 
-```sh
-npm publish
-```
+Arad Fadaei - [fadaei.dev](https://www.fadaei.dev)
