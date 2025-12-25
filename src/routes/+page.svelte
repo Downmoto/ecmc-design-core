@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Hbox from '$lib/atoms/container/sub/hbox.container.svelte';
-	import Vbox from '$lib/atoms/container/sub/vbox.container.svelte';
 	import {
 		Text,
 		HBox,
@@ -24,9 +22,9 @@
 
 <VBox gap="md" padding="lg">
 	<Text variant="headline">Molecules Demo</Text>
-	<Vbox gap="sm">
+	<VBox gap="sm">
 		<Text variant="subtitle">Buttons</Text>
-		<Hbox
+		<HBox
 			gap="md"
 			padding="md"
 			justify="space-between"
@@ -35,11 +33,11 @@
 			<Button>Button One</Button>
 			<Button variant="secondary">Button Two</Button>
 			<Button variant="disabled">Button Disabled</Button>
-		</Hbox>
+		</HBox>
 		<Button onclick={toggleTheme}>
 			Toggle {isDark ? 'Light' : 'Dark'} Mode
 		</Button>
-	</Vbox>
+	</VBox>
 
 	<Text variant="headline">Layout Components Demo</Text>
 
