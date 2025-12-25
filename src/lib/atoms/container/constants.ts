@@ -11,6 +11,7 @@ export const defaultProps: Partial<ContainerProps> = {
  * CSS class mappings for padding variants
  */
 export const paddingClasses = {
+	none: 'container--padding-none',
 	xsm: 'container--padding-xsm',
 	sm: 'container--padding-sm',
 	md: 'container--padding-md',

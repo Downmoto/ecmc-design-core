@@ -62,6 +62,7 @@ video {
 
 /* Spacing Atoms */
 :root {
+	--spacing-none: 0rem;
 	--spacing-xsm: 0.5rem;
 	--spacing-sm: 1rem;
 	--spacing-md: 1.5rem;

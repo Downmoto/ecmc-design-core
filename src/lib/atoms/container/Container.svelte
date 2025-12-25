@@ -67,6 +67,10 @@
 </div>
 
 <style>
+	.container--padding-none {
+		padding: var(--spacing-none);
+	}
+
 	.container--padding-xsm {
 		padding: var(--spacing-xsm);
 	}
