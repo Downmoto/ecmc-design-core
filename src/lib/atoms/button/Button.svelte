@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Centered from '$lib/atoms/container/sub/centered.container.svelte';
 	import Text from '$lib/atoms/text/Text.svelte';
-	import { cn } from '../../utils/cn.ts';
-	import { buttonVariantClasses, defaultProps } from './constants.ts';
+	import { cn } from '../../utils/cn.js';
+	import { buttonVariantClasses, defaultProps } from './constants.js';
 	import type { ButtonProps } from './types.js';
 
 	let { children, onclick, variant = defaultProps.variant! }: ButtonProps = $props();
