@@ -7,7 +7,7 @@
 		Centered,
 		Button,
 		type ContainerMetrics
-	} from '$lib/index.ts';
+	} from '$lib/index.js';
 	import '$lib/utils/ecmc.css';
 
 	let containerMetrics: ContainerMetrics | undefined = $state();

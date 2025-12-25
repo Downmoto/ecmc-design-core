@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Container from '../container.svelte';
+	import Container from '../Container.svelte';
 	import type { InternalBoxProps } from '../types.js';
 
 	let {
