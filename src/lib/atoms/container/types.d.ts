@@ -228,6 +228,8 @@ export interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
 	 */
 	padding?: 'none' | 'xsm' | 'sm' | 'md' | 'lg' | 'xl';
 
+	fill?: boolean;
+
 	/**
 	 * Optional bind property to track container element metrics
 	 *

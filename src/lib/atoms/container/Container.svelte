@@ -7,11 +7,12 @@
 	let {
 		children,
 		padding = defaultProps.padding!,
+		fill = defaultProps.fill!,
 		metrics = $bindable(),
 		...restProps
 	}: ContainerProps = $props();
 
-	let computedClasses = $derived(cn(paddingClasses[padding]));
+	let computedClasses = $derived(cn(paddingClasses[padding], fill ? 'container--fill' : ''));
 
 	// Container element reference
 	let containerElement: HTMLDivElement;
@@ -89,5 +90,10 @@
 
 	.container--padding-xl {
 		padding: var(--spacing-xl);
+	}
+
+	.container--fill {
+		height: 100%;
+		width: 100%;
 	}
 </style>

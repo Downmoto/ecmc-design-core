@@ -4,7 +4,8 @@ import type { ContainerProps } from './types.js';
  * Default props for the container atom
  */
 export const defaultProps: Partial<ContainerProps> = {
-	padding: 'md'
+	padding: 'md',
+	fill: false
 };
 
 /**
