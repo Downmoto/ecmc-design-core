@@ -1,9 +1,13 @@
 export interface InputProps {
-	type?: 'text' | 'email';
+	type?: 'text' | 'email' | 'password';
 
 	label?: string;
 
 	labelLeft?: boolean;
 
-	placeholder?: boolean;
+	placeholder?: string;
+
+	value: string;
+
+	id?: string;
 }

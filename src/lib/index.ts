@@ -15,3 +15,6 @@ export type { TextProps } from './atoms/text/types.js';
 
 export { default as Button } from './atoms/button/Button.svelte';
 export type { ButtonProps } from './atoms/button/types.js';
+
+export { default as Input } from './atoms/input/Input.svelte';
+export type { InputProps } from './atoms/input/types.js';
