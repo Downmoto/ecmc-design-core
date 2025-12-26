@@ -16,7 +16,8 @@
 
 	<style>
 		.styling-container {
-			width: 800px;
+			max-width: 800px;
+			width: 100%;
 		}
 	</style>
 {/snippet}
