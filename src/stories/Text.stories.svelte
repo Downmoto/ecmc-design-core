@@ -1,7 +1,7 @@
 <script module lang="ts">
 	import { defineMeta } from '@storybook/addon-svelte-csf';
-	import Text from './Text.svelte';
-	import type { TextProps } from './types.js';
+	import { Text } from '$lib/index.js';
+	import type { TextProps } from '$lib/index.js';
 
 	const { Story } = defineMeta({
 		component: Text,
