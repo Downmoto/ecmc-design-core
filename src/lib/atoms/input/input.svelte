@@ -39,7 +39,6 @@
 		bind:value
 		{type}
 		{placeholder}
-		class="input-field"
 		aria-label={label ? label : 'unlabeled, please report'}
 	/>
 {/snippet}
@@ -55,7 +54,7 @@
 {/if}
 
 <style>
-	.input-field {
+	input {
 		padding: var(--spacing-xsm);
 		background-color: light-dark(var(--neutral-100), var(--neutral-900));
 		border: 1px solid light-dark(var(--neutral-400), var(--neutral-400));
@@ -64,17 +63,17 @@
 		width: 100%;
 	}
 
-	.input-field::placeholder {
+	input::placeholder {
 		color: light-dark(var(--neutral-400), var(--neutral-400));
 		opacity: 0.7;
 	}
 
-	.input-field:focus {
+	input:focus {
 		border-color: light-dark(var(--red-600), var(--red-500));
 		box-shadow: 0 0 0 2px light-dark(rgba(186, 24, 27, 0.1), rgba(229, 56, 59, 0.1));
 	}
 
-	.input-field:hover:not(:focus) {
+	input:hover:not(:focus) {
 		border-color: light-dark(var(--neutral-950), var(--neutral-300));
 	}
 </style>

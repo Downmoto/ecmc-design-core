@@ -14,10 +14,19 @@
 {/snippet}
 
 <Story name="Input" args={{ label: 'Label', id: 'input' }} />
+
 <Story name="Input with value" args={{ label: 'Label', value: 'value', id: 'input-w-value' }} />
+
+<Story
+	name="Input with password value"
+	args={{ label: 'Label', value: 'password-value', type: 'password', id: 'input-w-pass' }}
+/>
+
 <Story name="Input Label Left" args={{ label: 'Label', labelLeft: true, id: 'input-label-left' }} />
+
 <Story
 	name="Input Placeholder"
 	args={{ label: 'Label', placeholder: 'placeholder', id: 'input-placeholder' }}
 />
+
 <Story name="Input no Label" args={{ id: 'input-no-label' }} />
