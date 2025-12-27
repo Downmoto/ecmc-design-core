@@ -19,11 +19,19 @@
 <Story
 	name="Button Primary"
 	args={{ variant: 'primary' }}
-	play={async ({ canvas, userEvent: userEvent }) => {
-		await userEvent.click(canvas.getByRole('button'));
+	play={async ({ canvas, userEvent }) => {
+		const button = canvas.getByRole('button') as HTMLButtonElement;
 
-		await expect(canvas.getByRole('button').innerText).toBe('Button Pressed');
+		// Check initial state
+		await expect(button.innerText).toBe('Button Text');
+		await expect(button.classList.contains('button--primary')).toBe(true);
+		await expect(button.disabled).toBe(false);
 
+		// Test click interaction
+		await userEvent.click(button);
+		await expect(button.innerText).toBe('Button Pressed');
+
+		// Cleanup
 		test_label = 'Button Text';
 	}}
 />
@@ -32,10 +40,18 @@
 	name="Button Secondary"
 	args={{ variant: 'secondary' }}
 	play={async ({ canvas, userEvent }) => {
-		await userEvent.click(canvas.getByRole('button'));
+		const button = canvas.getByRole('button') as HTMLButtonElement;
 
-		await expect(canvas.getByRole('button').innerText).toBe('Button Pressed');
+		// Check initial state and CSS class
+		await expect(button.innerText).toBe('Button Text');
+		await expect(button.classList.contains('button--secondary')).toBe(true);
+		await expect(button.disabled).toBe(false);
 
+		// Test click interaction
+		await userEvent.click(button);
+		await expect(button.innerText).toBe('Button Pressed');
+
+		// Cleanup
 		test_label = 'Button Text';
 	}}
 />
@@ -44,10 +60,17 @@
 	name="Button Disabled"
 	args={{ variant: 'disabled' }}
 	play={async ({ canvas, userEvent }) => {
-		await userEvent.click(canvas.getByRole('button'));
+		const button = canvas.getByRole('button') as HTMLButtonElement;
 
-		await expect(canvas.getByRole('button').innerText).not.toBe('Button Pressed');
+		// Check disabled state
+		await expect(button.disabled).toBe(true);
+		await expect(button.classList.contains('button--disabled')).toBe(true);
 
+		// Attempt to click (should not change text)
+		await userEvent.click(button);
+		await expect(button.innerText).toBe('Button Text');
+
+		// Cleanup
 		test_label = 'Button Text';
 	}}
 />
