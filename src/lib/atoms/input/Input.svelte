@@ -70,7 +70,6 @@
 
 	input:focus {
 		border-color: light-dark(var(--red-600), var(--red-500));
-		box-shadow: 0 0 0 2px light-dark(rgba(186, 24, 27, 0.1), rgba(229, 56, 59, 0.1));
 	}
 
 	input:hover:not(:focus) {
