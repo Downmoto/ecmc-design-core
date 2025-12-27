@@ -1,6 +1,9 @@
 name: UI Tests
 
-on: deployment_status
+on:
+  push:
+    branches: [master]
+  pull_request:
 
 jobs:
   test:
@@ -9,7 +12,6 @@ jobs:
       # Make sure to grab the latest version of the Playwright image
       # https://playwright.dev/docs/docker#pull-the-image
       image: mcr.microsoft.com/playwright:v1.52.0-noble
-    if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success'
     steps:
       - uses: actions/checkout@v4
 
@@ -23,6 +25,3 @@ jobs:
 
       - name: Run tests
         run: npm run test-storybook
-
-        env:
-          SB_URL: '${{ github.event.deployment_status.environment_url }}'
