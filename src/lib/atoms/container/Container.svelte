@@ -9,10 +9,13 @@
 		padding = defaultProps.padding!,
 		fill = defaultProps.fill!,
 		metrics = $bindable(),
+		bg = defaultProps.bg!,
 		...restProps
 	}: ContainerProps = $props();
 
-	let computedClasses = $derived(cn(paddingClasses[padding], fill ? 'container--fill' : ''));
+	let computedClasses = $derived(
+		cn(paddingClasses[padding], fill ? 'container--fill' : '', bg ? 'container--bg' : '')
+	);
 
 	// Container element reference
 	let containerElement: HTMLDivElement;
@@ -95,5 +98,9 @@
 	.container--fill {
 		height: 100%;
 		width: 100%;
+	}
+
+	.container--bg {
+		background-color: light-dark(var(--neutral-200), var(--neutral-800));
 	}
 </style>

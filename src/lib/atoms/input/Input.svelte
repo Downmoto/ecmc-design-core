@@ -56,23 +56,18 @@
 <style>
 	input {
 		padding: var(--spacing-xsm);
-		background-color: light-dark(var(--neutral-100), var(--neutral-900));
-		border: 1px solid light-dark(var(--neutral-400), var(--neutral-400));
-		border-radius: var(--rounding-size-1);
+		background-color: light-dark(var(--neutral-300), var(--neutral-700));
+		border: 1px solid light-dark(var(--neutral-300), var(--neutral-700));
 		outline: none;
 		width: 100%;
 	}
 
 	input::placeholder {
-		color: light-dark(var(--neutral-400), var(--neutral-400));
+		color: light-dark(var(--neutral-500), var(--neutral-400));
 		opacity: 0.7;
 	}
 
 	input:focus {
-		border-color: light-dark(var(--red-600), var(--red-500));
-	}
-
-	input:hover:not(:focus) {
-		border-color: light-dark(var(--neutral-950), var(--neutral-300));
+		border-color: light-dark(var(--neutral-900), var(--neutral-300));
 	}
 </style>

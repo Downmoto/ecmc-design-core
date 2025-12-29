@@ -26,39 +26,36 @@
 	}
 
 	.button--primary {
-		background-color: var(--red-600);
+		background-color: var(--primary-600);
 		color: var(--neutral-100);
 	}
 
 	.button--primary:hover {
-		background-color: var(--red-700);
+		background-color: var(--primary-700);
 	}
 
 	.button--primary:active {
-		background-color: var(--red-900);
+		background-color: var(--primary-900);
 	}
 
 	.button--secondary {
-		background-color: var(--neutral-300);
-		color: var(--neutral-950);
+		background-color: var(--neutral-400);
+		color: var(--neutral-100);
 	}
 
 	.button--secondary:hover {
-		background-color: var(--neutral-400);
+		background-color: var(--neutral-500);
+		color: var(--neutral-100);
 	}
 
 	.button--secondary:active {
-		background-color: var(--neutral-100);
+		background-color: var(--neutral-600);
 	}
 
 	.button--disabled {
 		background-color: var(--neutral-300);
-		color: var(--neutral-400);
+		color: var(--neutral-600);
 		cursor: not-allowed;
 		opacity: 0.6;
-	}
-
-	.button--disabled:hover {
-		background-color: var(--neutral-300);
 	}
 </style>

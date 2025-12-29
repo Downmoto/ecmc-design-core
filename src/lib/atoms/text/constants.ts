@@ -17,7 +17,8 @@ export const textVariantClasses = {
 	headline: 'text--headline',
 	subtitle: 'text--subtitle',
 	body: 'text--body',
-	bodyPlus: 'text--body-plus'
+	bodyPlus: 'text--body-plus',
+	half: 'text--half'
 } as const;
 
 /**
