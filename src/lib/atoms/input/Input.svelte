@@ -11,8 +11,10 @@
 		placeholder = defaultProps.placeholder!,
 		value = $bindable(),
 		label,
-		id
+		id: providedId
 	}: InputProps = $props();
+
+	let id = $derived(providedId ?? `${label?.replace(/\s+/g, '-')}-id`);
 
 	let isSmallScreen = $state(false);
 	let effectiveLabelLeft = $derived(isSmallScreen ? false : labelLeft);
