@@ -7,6 +7,10 @@
 		"name": "Arad Fadaei",
 		"url": "https://www.fadaei.dev"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Downmoto/ecmc-design-core/"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && bun run prepack",
