@@ -82,7 +82,9 @@
 		"@vitest/coverage-v8": "^4.0.16"
 	},
 	"keywords": [
-		"svelte"
+		"svelte",
+		"component",
+		"atomic"
 	],
 	"lint-staged": {
 		"*": "prettier --write --ignore-unknown",
