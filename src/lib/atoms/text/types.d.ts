@@ -32,7 +32,7 @@ export interface TextProps extends HTMLAttributes<HTMLElement> {
 	 *
 	 * @default 'body'
 	 */
-	variant?: 'headline' | 'subtitle' | 'body' | 'bodyPlus';
+	variant?: 'headline' | 'subtitle' | 'body' | 'bodyPlus' | 'half';
 
 	/**
 	 * Whether the text should be rendered in italic style

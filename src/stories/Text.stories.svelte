@@ -77,6 +77,18 @@
 />
 
 <Story
+	name="Text Half"
+	args={{ variant: 'half', align: 'center' }}
+	play={async ({ canvas }) => {
+		const textElement = canvas.getByText('Sample Text Content');
+
+		// Check variant class
+		await expect(textElement.classList.contains('text--half')).toBe(true);
+		await expect(textElement.classList.contains('text--align-center')).toBe(true);
+	}}
+/>
+
+<Story
 	name="Text Italic"
 	args={{ variant: 'body', italic: true, align: 'center' }}
 	play={async ({ canvas }) => {

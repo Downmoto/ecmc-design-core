@@ -14,6 +14,7 @@
 
 body {
 	min-height: 100vh;
+	background-color: light-dark(var(--neutral-100), var(--neutral-900));
 }
 
 html {
@@ -37,8 +38,9 @@ video {
 	font-weight: 300;
 	font-style: normal;
 	font-size: 16px;
-	color: light-dark(var(--neutral-950), var(--neutral-100));
+	color: light-dark(var(--neutral-900), var(--neutral-100));
 
+	--font-size-0: 0.7rem;
 	--font-size-1: 1rem;
 	--font-size-2: 1.2rem;
 	--font-size-3: 2.5rem;
@@ -47,17 +49,21 @@ video {
 
 /* Colour Atoms */
 :root {
-	--neutral-950: #0b090a;
-	--neutral-900: #161a1d;
-	--neutral-400: #b1a7a6;
-	--neutral-300: #d3d3d3;
-	--neutral-100: #f5f3f4;
-	--neutral-50: #ffffff;
+	--neutral-50: #f5f7fa;
+	--neutral-100: #dfe2e6;
+	--neutral-200: #c0c5ce;
+	--neutral-300: #a7adba;
+	--neutral-400: #65737e;
+	--neutral-500: #4f5b66;
+	--neutral-600: #343d46;
+	--neutral-700: #23292f;
+	--neutral-800: #1a1e23;
+	--neutral-900: #111417;
 
-	--red-900: #660708;
-	--red-700: #a4161a;
-	--red-600: #ba181b;
-	--red-500: #e5383b;
+	--primary-900: #660708;
+	--primary-700: #a4161a;
+	--primary-600: #ba181b;
+	--primary-500: #e5383b;
 }
 
 /* Spacing Atoms */

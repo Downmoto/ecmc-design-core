@@ -49,6 +49,11 @@
 		font-size: var(--font-size-1);
 	}
 
+	.text--half {
+		font-weight: 100;
+		font-size: var(--font-size-0);
+	}
+
 	.text--italic {
 		font-style: italic;
 	}

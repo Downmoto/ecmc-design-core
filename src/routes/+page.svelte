@@ -6,7 +6,8 @@
 		GridBox,
 		Centered,
 		Button,
-		type ContainerMetrics
+		type ContainerMetrics,
+		Input
 	} from '$lib/index.js';
 	import '$lib/utils/ecmc.css';
 
@@ -21,15 +22,10 @@
 </script>
 
 <VBox gap="md" padding="lg">
-	<Text variant="headline">Molecules Demo</Text>
+	<Text variant="headline">Component Demos</Text>
 	<VBox gap="sm">
 		<Text variant="subtitle">Buttons</Text>
-		<HBox
-			gap="md"
-			padding="md"
-			justify="space-between"
-			style="border: 1px solid var(--neutral-100); border-radius: 5px;"
-		>
+		<HBox bg gap="md" padding="md" justify="space-between">
 			<Button>Button One</Button>
 			<Button variant="secondary">Button Two</Button>
 			<Button variant="disabled">Button Disabled</Button>
@@ -37,35 +33,33 @@
 		<Button onclick={toggleTheme}>
 			Toggle {isDark ? 'Light' : 'Dark'} Mode
 		</Button>
+
+		<Text variant="subtitle">Input</Text>
+		<GridBox bg columns={2}>
+			<Input value="" label="text input" placeholder="placeholder" />
+			<Input value="" label="email input" placeholder="placeholder" type="email" />
+			<Input value="" label="text input" />
+			<Input value="" placeholder="email" type="email" />
+		</GridBox>
 	</VBox>
 
 	<Text variant="headline">Layout Components Demo</Text>
 
 	<VBox gap="sm">
 		<Text variant="subtitle">HBox - Horizontal Layout</Text>
-		<HBox gap="md" padding="md" style="border: 1px solid var(--neutral-100); border-radius: 5px;">
+		<HBox bg gap="md" padding="md">
 			<Text>Item 1</Text>
 			<Text>Item 2</Text>
 			<Text>Item 3</Text>
 		</HBox>
 
-		<HBox
-			gap="sm"
-			justify="space-between"
-			padding="sm"
-			style="border: 1px solid var(--neutral-100); border-radius: 5px;"
-		>
+		<HBox bg gap="sm" justify="space-between" padding="sm">
 			<Text>Start</Text>
 			<Text>Space Between</Text>
 			<Text>End</Text>
 		</HBox>
 
-		<HBox
-			gap="md"
-			wrap={true}
-			padding="md"
-			style="border: 1px solid var(--neutral-100); border-radius: 5px; max-width: 400px;"
-		>
+		<HBox bg gap="md" wrap={true} padding="md">
 			<Text>Wrapping</Text>
 			<Text>Items</Text>
 			<Text>When</Text>
@@ -78,18 +72,13 @@
 
 	<VBox gap="sm">
 		<Text variant="subtitle">VBox - Vertical Layout</Text>
-		<VBox gap="md" padding="md" style="border: 1px solid var(--neutral-100); border-radius: 5px;">
+		<VBox bg gap="md" padding="md">
 			<Text>Item 1</Text>
 			<Text>Item 2</Text>
 			<Text>Item 3</Text>
 		</VBox>
 
-		<VBox
-			gap="sm"
-			align="center"
-			padding="sm"
-			style="border: 1px solid var(--neutral-100); border-radius: 5px;"
-		>
+		<VBox bg gap="sm" align="center" padding="sm">
 			<Text>Centered</Text>
 			<Text>Alignment</Text>
 		</VBox>
@@ -97,12 +86,7 @@
 
 	<VBox gap="sm">
 		<Text variant="subtitle">GridBox - Grid Layout</Text>
-		<GridBox
-			columns={3}
-			gap="md"
-			padding="md"
-			style="border: 1px solid var(--neutral-100); border-radius: 5px;"
-		>
+		<GridBox bg columns={3} gap="md" padding="md">
 			<Text align="center">Cell 1</Text>
 			<Text>Cell 2</Text>
 			<Text>Cell 3</Text>
@@ -111,12 +95,7 @@
 			<Text>Cell 6</Text>
 		</GridBox>
 
-		<GridBox
-			columns="200px 1fr 1fr"
-			gap="sm"
-			padding="sm"
-			style="border: 1px solid var(--neutral-100); border-radius: 5px;"
-		>
+		<GridBox bg columns="200px 1fr 1fr" gap="sm" padding="sm">
 			<Text>200px</Text>
 			<Text>1fr</Text>
 			<Text>1fr</Text>
@@ -125,26 +104,18 @@
 
 	<VBox gap="sm">
 		<Text variant="subtitle">Centered - Center Alignment</Text>
-		<Centered
-			padding="md"
-			style="border: 1px solid var(--neutral-100); border-radius: 5px; height: 200px;"
-		>
+		<Centered bg padding="md" style="height: 200px;">
 			<Text>Fully Centered Content</Text>
 		</Centered>
 
-		<Centered
-			horizontal={true}
-			vertical={false}
-			padding="md"
-			style="border: 1px solid var(--neutral-100); border-radius: 5px; height: 100px;"
-		>
+		<Centered bg horizontal={true} vertical={false} padding="md" style="height: 100px;">
 			<Text>Horizontally Centered Only</Text>
 		</Centered>
 	</VBox>
 
 	<VBox gap="sm" bind:metrics={containerMetrics}>
 		<Text variant="subtitle">Metrics Tracking</Text>
-		<HBox gap="md" padding="md" style="border: 1px solid var(--neutral-100); border-radius: 5px;">
+		<HBox bg gap="md" padding="md">
 			<Text>Container with metrics</Text>
 			{#if containerMetrics}
 				<Text variant="body"
