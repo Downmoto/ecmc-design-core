@@ -18,3 +18,9 @@ export type { ButtonProps } from './atoms/button/types.js';
 
 export { default as Input } from './atoms/input/Input.svelte';
 export type { InputProps } from './atoms/input/types.js';
+
+export { default as Kbd } from './atoms/kbd/Kbd.svelte';
+export type { KbdProps } from './atoms/kbd/types.js';
+
+export { default as Item } from './molecules/item/Item.svelte';
+export type { ItemProps } from './molecules/item/types.js';
