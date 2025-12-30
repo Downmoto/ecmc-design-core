@@ -228,10 +228,28 @@ export interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
 	 */
 	padding?: 'none' | 'xsm' | 'sm' | 'md' | 'lg' | 'xl';
 
+	/**
+	 * whether to make the container fill its parent dimensions
+	 * sets width and height to 100%
+	 *
+	 * @default false
+	 */
 	fill?: boolean;
 
+	/**
+	 * whether to apply a background color to the container
+	 * uses neutral-200 in light mode, neutral-800 in dark mode
+	 *
+	 * @default false
+	 */
 	bg?: boolean;
 
+	/**
+	 * whether to apply border radius to the container
+	 * uses var(--rounding-size-1) which is 5px
+	 *
+	 * @default false
+	 */
 	rounding?: boolean;
 
 	/**
