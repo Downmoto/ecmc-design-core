@@ -5,7 +5,7 @@ Atoms and molecules for the ECMC design system built with Svelte 5.
 ```sh
 bun i ecmc-design-core
 # or
-npm i ecmc-design-code
+npm i ecmc-design-core
 ```
 
 ## Overview
