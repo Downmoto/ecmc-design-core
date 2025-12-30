@@ -2,6 +2,12 @@
 
 Atoms and molecules for the ECMC design system built with Svelte 5.
 
+```sh
+bun i ecmc-design-core
+# or
+npm i ecmc-design-code
+```
+
 ## Overview
 
 This is an opinionated component library providing foundational UI components (atoms) and compound components (molecules) for building consistent user interfaces. The library is built with Svelte 5 and includes TypeScript support and Storybook integration.
