@@ -5,7 +5,8 @@ import type { ContainerProps } from './types.js';
  */
 export const defaultProps: Partial<ContainerProps> = {
 	padding: 'md',
-	fill: false
+	fill: false,
+	bg: false
 };
 
 /**
