@@ -232,6 +232,8 @@ export interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
 
 	bg?: boolean;
 
+	rounding?: boolean;
+
 	/**
 	 * Optional bind property to track container element metrics
 	 *

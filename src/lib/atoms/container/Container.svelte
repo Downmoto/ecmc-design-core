@@ -10,11 +10,17 @@
 		fill = defaultProps.fill!,
 		metrics = $bindable(),
 		bg = defaultProps.bg!,
+		rounding = defaultProps.rounding!,
 		...restProps
 	}: ContainerProps = $props();
 
 	let computedClasses = $derived(
-		cn(paddingClasses[padding], fill ? 'container--fill' : '', bg ? 'container--bg' : '')
+		cn(
+			paddingClasses[padding],
+			fill ? 'container--fill' : '',
+			bg ? 'container--bg' : '',
+			rounding ? 'container--rounding' : ''
+		)
 	);
 
 	// Container element reference
@@ -102,5 +108,9 @@
 
 	.container--bg {
 		background-color: light-dark(var(--neutral-200), var(--neutral-800));
+	}
+
+	.container--rounding {
+		border-radius: var(--rounding-size-1);
 	}
 </style>
