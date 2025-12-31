@@ -24,3 +24,6 @@ export type { KbdProps } from './atoms/kbd/types.js';
 
 export { default as Item } from './molecules/item/Item.svelte';
 export type { ItemProps } from './molecules/item/types.js';
+
+export { default as ContextMenu } from './molecules/contextMenu/ContextMenu.svelte'
+export { default as ContextMenuItem } from './molecules/contextMenu/sub/ContextMenuItem.svelte'
