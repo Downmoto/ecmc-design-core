@@ -7,7 +7,7 @@
 
 	let { children, onclick, variant = defaultProps.variant! }: ButtonProps = $props();
 
-	let computedClasses = $derived(cn(buttonVariantClasses[variant]));
+	let computedClasses = $derived(cn('ecmc', 'ecmc-button', buttonVariantClasses[variant]));
 </script>
 
 <button class={computedClasses} disabled={variant === 'disabled'} {onclick}>
@@ -21,39 +21,39 @@
 <style>
 	button {
 		border: none;
-		border-radius: var(--rounding-size-1);
+		border-radius: var(--ecmc-rounding-size-1);
 		cursor: pointer;
 	}
 
 	.button--primary {
-		background-color: var(--primary-600);
+		background-color: var(--ecmc-primary-600);
 		color: var(--neutral-100);
 	}
 
 	.button--primary:hover {
-		background-color: var(--primary-700);
+		background-color: var(--ecmc-primary-700);
 	}
 
 	.button--primary:active {
-		background-color: var(--primary-900);
+		background-color: var(--ecmc-primary-900);
 	}
 
 	.button--secondary {
-		background-color: var(--neutral-400);
+		background-color: var(--ecmc-neutral-400);
 		color: var(--neutral-100);
 	}
 
 	.button--secondary:hover {
-		background-color: var(--neutral-500);
+		background-color: var(--ecmc-neutral-500);
 		color: var(--neutral-100);
 	}
 
 	.button--secondary:active {
-		background-color: var(--neutral-600);
+		background-color: var(--ecmc-neutral-600);
 	}
 
 	.button--disabled {
-		background-color: var(--neutral-300);
+		background-color: var(--ecmc-neutral-300);
 		color: var(--neutral-600);
 		cursor: not-allowed;
 		opacity: 0.6;

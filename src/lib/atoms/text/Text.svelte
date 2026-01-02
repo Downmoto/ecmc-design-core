@@ -14,7 +14,13 @@
 	}: TextProps = $props();
 
 	let computedClasses = $derived(
-		cn(textAlignClasses[align], textVariantClasses[variant], italic ? 'text--italic' : '')
+		cn(
+			'ecmc',
+			'ecmc-text',
+			textAlignClasses[align],
+			textVariantClasses[variant],
+			italic ? 'text--italic' : ''
+		)
 	);
 </script>
 
@@ -31,27 +37,27 @@
 <style>
 	.text--headline {
 		font-weight: 700;
-		font-size: var(--font-size-4);
+		font-size: var(--ecmc-font-size-4);
 	}
 
 	.text--subtitle {
 		font-weight: 500;
-		font-size: var(--font-size-3);
+		font-size: var(--ecmc-font-size-3);
 	}
 
 	.text--body-plus {
 		font-weight: 300;
-		font-size: var(--font-size-2);
+		font-size: var(--ecmc-font-size-2);
 	}
 
 	.text--body {
 		font-weight: 300;
-		font-size: var(--font-size-1);
+		font-size: var(--ecmc-font-size-1);
 	}
 
 	.text--half {
 		font-weight: 100;
-		font-size: var(--font-size-0);
+		font-size: var(--ecmc-font-size-0);
 	}
 
 	.text--italic {

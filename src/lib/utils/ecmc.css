@@ -1,20 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-*,
-*::before,
-*::after {
+.ecmc,
+.ecmc::before,
+.ecmc::after {
 	box-sizing: border-box;
 }
 
-* {
+.ecmc {
 	margin: 0;
 	padding: 0;
-	font: inherit;
-}
-
-body {
-	min-height: 100vh;
-	background-color: light-dark(var(--neutral-100), var(--neutral-900));
 }
 
 html {
@@ -30,97 +24,100 @@ video {
 }
 
 /* ---- ATOMS ---- */
-
 /* Font Atoms */
-:root {
-	font-family: 'Roboto Mono', monospace;
-	font-optical-sizing: auto;
-	font-weight: 300;
-	font-style: normal;
-	font-size: 16px;
-	color: light-dark(var(--neutral-900), var(--neutral-100));
+.ecmc {
+	--ecmc-font-root: 16px;
+	--ecmc-font-size-0: 0.7em;
+	--ecmc-font-size-1: 1em;
+	--ecmc-font-size-2: 1.2em;
+	--ecmc-font-size-3: 2.5em;
+	--ecmc-font-size-4: 3em;
 
-	--font-size-0: 0.7rem;
-	--font-size-1: 1rem;
-	--font-size-2: 1.2rem;
-	--font-size-3: 2.5rem;
-	--font-size-4: 3rem;
+	--ecmc-font-face-main: 'Roboto Mono', monospace;
+	--ecmc-font-face-weight-main: 300;
+
+	font-family: var(--ecmc-font-face-main);
+	font-weight: var(--ecmc-font-face-weight-main);
+	font-size: var(--ecmc-font-root);
+	color: light-dark(var(--neutral-900), var(--neutral-100));
+	font-optical-sizing: auto;
+	font-style: normal;
 }
 
 /* Colour Atoms */
-:root {
-	--neutral-50: #f5f7fa;
-	--neutral-100: #dfe2e6;
-	--neutral-200: #c0c5ce;
-	--neutral-300: #a7adba;
-	--neutral-400: #65737e;
-	--neutral-500: #4f5b66;
-	--neutral-600: #343d46;
-	--neutral-700: #23292f;
-	--neutral-800: #1a1e23;
-	--neutral-900: #111417;
+.ecmc {
+	--ecmc-neutral-50: #f5f7fa;
+	--ecmc-neutral-100: #dfe2e6;
+	--ecmc-neutral-200: #c0c5ce;
+	--ecmc-neutral-300: #a7adba;
+	--ecmc-neutral-400: #65737e;
+	--ecmc-neutral-500: #4f5b66;
+	--ecmc-neutral-600: #343d46;
+	--ecmc-neutral-700: #23292f;
+	--ecmc-neutral-800: #1a1e23;
+	--ecmc-neutral-900: #111417;
 
-	--primary-900: #660708;
-	--primary-700: #a4161a;
-	--primary-600: #ba181b;
-	--primary-500: #e5383b;
+	--ecmc-primary-900: #660708;
+	--ecmc-primary-700: #a4161a;
+	--ecmc-primary-600: #ba181b;
+	--ecmc-primary-500: #e5383b;
 }
 
 /* Spacing Atoms */
-:root {
-	--spacing-none: 0rem;
-	--spacing-xsm: 0.5rem;
-	--spacing-sm: 1rem;
-	--spacing-md: 1.5rem;
-	--spacing-lg: 2rem;
-	--spacing-xl: 3rem;
+.ecmc {
+	--ecmc-spacing-none: 0em;
+	--ecmc-spacing-xsm: 0.5em;
+	--ecmc-spacing-sm: 1em;
+	--ecmc-spacing-md: 1.5em;
+	--ecmc-spacing-lg: 2em;
+	--ecmc-spacing-xl: 3em;
 }
 
 /* Rounding Atoms */
-:root {
-	--rounding-size-1: 5px;
-	--rounding-size-2: 15px;
+.ecmc {
+	--ecmc-rounding-size-1: 5px;
+	--ecmc-rounding-size-2: 15px;
 }
 
 /* responsive breakpoints (mobile-first) */
 @media (min-width: 480px) {
-	:root {
-		--font-size-2: 1.1rem;
-		--spacing-md: 1.25rem;
+	.ecmc {
+		--ecmc-font-size-2: 1.1em;
+		--ecmc-spacing-md: 1.25em;
 	}
 }
 
 @media (min-width: 640px) {
-	:root {
-		--font-size-3: 2.3rem;
-		--spacing-lg: 2.25rem;
+	.ecmc {
+		--ecmc-font-size-3: 2.3em;
+		--ecmc-spacing-lg: 2.25em;
 	}
 }
 
 @media (min-width: 768px) {
-	:root {
-		--font-size-2: 1.2rem;
-		--font-size-3: 2.5rem;
-		--spacing-xl: 3.25rem;
+	.ecmc {
+		--ecmc-font-size-2: 1.2em;
+		--ecmc-font-size-3: 2.5em;
+		--ecmc-spacing-xl: 3.25em;
 	}
 }
 
 @media (min-width: 1024px) {
-	:root {
-		--font-size-4: 3.25rem;
+	.ecmc {
+		--ecmc-font-size-4: 3.25em;
 	}
 }
 
 @media (min-width: 1280px) {
-	:root {
-		--font-size-3: 2.7rem;
-		--font-size-4: 3.5rem;
+	.ecmc {
+		--ecmc-font-size-3: 2.7em;
+		--ecmc-font-size-4: 3.5em;
 	}
 }
 
 @media (min-width: 1536px) {
-	:root {
-		--font-size-3: 2.9rem;
-		--font-size-4: 3.75rem;
+	.ecmc {
+		--ecmc-font-size-3: 2.9em;
+		--ecmc-font-size-4: 3.75em;
 	}
 }

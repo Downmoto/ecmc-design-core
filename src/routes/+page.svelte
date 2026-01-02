@@ -59,7 +59,7 @@
 			<Text>End</Text>
 		</HBox>
 
-		<HBox bg gap="md" wrap={true} padding="md">
+		<HBox bg gap="md" wrap={true} padding="md" style="max-width: 200px;">
 			<Text>Wrapping</Text>
 			<Text>Items</Text>
 			<Text>When</Text>
@@ -127,3 +127,11 @@
 		</HBox>
 	</VBox>
 </VBox>
+
+<style>
+	:global(body) {
+		margin: 0;
+		min-height: 100vh;
+		background-color: light-dark(var(--ecmc-neutral-100), var(--ecmc-neutral-900));
+	}
+</style>
