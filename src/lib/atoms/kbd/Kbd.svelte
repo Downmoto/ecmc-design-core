@@ -1,3 +1,14 @@
+<!--
+	@component
+	# Kbd
+	
+	Represents keyboard keys or shortcuts with visual styling that resembles physical keyboard keys.
+	Useful for displaying keyboard shortcuts, hotkeys, or keyboard-related instructions.
+	
+	@param {Snippet} [children] - The content to be rendered inside the kbd element (typically key labels like "Ctrl", "⌘", etc.)
+	@param {'small' | 'medium' | 'large'} [size='small'] - Size variant: 'small' (compact for inline usage), 'medium' (standard), 'large' (emphasis)
+	@param {HTMLAttributes<HTMLElement>} [...restProps] - All standard HTML kbd element attributes
+-->
 <script lang="ts">
 	import { cn } from '../../utils/cn.js';
 	import type { KbdProps } from './types.js';
