@@ -2,7 +2,7 @@
 	"name": "ecmc-design-core",
 	"description": "Atoms and molecules for ecmc design system",
 	"license": "MIT",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"author": {
 		"name": "Arad Fadaei",
 		"url": "https://www.fadaei.dev"
