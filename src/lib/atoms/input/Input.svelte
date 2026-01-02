@@ -45,31 +45,33 @@
 	/>
 {/snippet}
 
-{#if effectiveLabelLeft}
-	<HBox gap="xsm">
-		{@render contents()}
-	</HBox>
-{:else}
-	<VBox gap="none">
-		{@render contents()}
-	</VBox>
-{/if}
+<div class="ecmc ecmc-input">
+	{#if effectiveLabelLeft}
+		<HBox gap="xsm">
+			{@render contents()}
+		</HBox>
+	{:else}
+		<VBox gap="none">
+			{@render contents()}
+		</VBox>
+	{/if}
+</div>
 
 <style>
 	input {
-		padding: var(--spacing-xsm);
-		background-color: light-dark(var(--neutral-300), var(--neutral-700));
-		border: 1px solid light-dark(var(--neutral-300), var(--neutral-700));
+		padding: var(--ecmc-spacing-xsm);
+		background-color: light-dark(var(--ecmc-neutral-300), var(--ecmc-neutral-700));
+		border: 1px solid light-dark(var(--ecmc-neutral-300), var(--ecmc-neutral-700));
 		outline: none;
 		width: 100%;
 	}
 
 	input::placeholder {
-		color: light-dark(var(--neutral-500), var(--neutral-400));
+		color: light-dark(var(--ecmc-neutral-500), var(--ecmc-neutral-400));
 		opacity: 0.7;
 	}
 
 	input:focus {
-		border-color: light-dark(var(--neutral-900), var(--neutral-300));
+		border-color: light-dark(var(--ecmc-neutral-900), var(--ecmc-neutral-300));
 	}
 </style>

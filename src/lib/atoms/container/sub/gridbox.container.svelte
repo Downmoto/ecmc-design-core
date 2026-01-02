@@ -19,7 +19,7 @@
 <Container bind:metrics {...containerProps}>
 	<div
 		class="gridbox"
-		style="grid-template-columns: {gridTemplateColumns}; gap: var(--spacing-{gap}); grid-auto-flow: {autoFlow};"
+		style="grid-template-columns: {gridTemplateColumns}; gap: var(--ecmc-spacing-{gap}); grid-auto-flow: {autoFlow};"
 	>
 		{@render children?.()}
 	</div>

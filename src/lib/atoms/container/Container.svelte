@@ -16,6 +16,8 @@
 
 	let computedClasses = $derived(
 		cn(
+			'ecmc',
+			'ecmc-container',
 			paddingClasses[padding],
 			fill ? 'container--fill' : '',
 			bg ? 'container--bg' : '',
@@ -78,27 +80,27 @@
 
 <style>
 	.container--padding-none {
-		padding: var(--spacing-none);
+		padding: var(--ecmc-spacing-none);
 	}
 
 	.container--padding-xsm {
-		padding: var(--spacing-xsm);
+		padding: var(--ecmc-spacing-xsm);
 	}
 
 	.container--padding-sm {
-		padding: var(--spacing-sm);
+		padding: var(--ecmc-spacing-sm);
 	}
 
 	.container--padding-md {
-		padding: var(--spacing-md);
+		padding: var(--ecmc-spacing-md);
 	}
 
 	.container--padding-lg {
-		padding: var(--spacing-lg);
+		padding: var(--ecmc-spacing-lg);
 	}
 
 	.container--padding-xl {
-		padding: var(--spacing-xl);
+		padding: var(--ecmc-spacing-xl);
 	}
 
 	.container--fill {
@@ -107,10 +109,10 @@
 	}
 
 	.container--bg {
-		background-color: light-dark(var(--neutral-200), var(--neutral-800));
+		background-color: light-dark(var(--ecmc-neutral-200), var(--ecmc-neutral-800));
 	}
 
 	.container--rounding {
-		border-radius: var(--rounding-size-1);
+		border-radius: var(--ecmc-rounding-size-1);
 	}
 </style>
