@@ -1,7 +1,20 @@
+<!--
+	@component
+	# Container
+	
+	A flexible container component with real-time DOM metrics tracking and extensive styling options.
+	
+	@param {Snippet} [children] - The content to be rendered inside the container
+	@param {'none' | 'xsm' | 'sm' | 'md' | 'lg' | 'xl'} [padding='none'] - Padding size mapped to CSS --spacing-* variables
+	@param {boolean} [fill=false] - Whether to make the container fill its parent dimensions (sets width and height to 100%)
+	@param {boolean} [bg=false] - Whether to apply a background color (neutral-200 in light mode, neutral-800 in dark mode)
+	@param {boolean} [rounding=false] - Whether to apply border radius using var(--rounding-size-1) which is 5px
+	@param {ContainerMetrics} [metrics] - Bindable prop to track real-time container element metrics (dimensions, position, scroll state)
+-->
 <script lang="ts">
 	import { cn } from '../../utils/cn.js';
-	import type { ContainerProps } from './types.js';
 	import { defaultProps, paddingClasses } from './constants.js';
+	import type { ContainerProps } from './types.js';
 
 	// Props with defaults
 	let {
@@ -16,6 +29,8 @@
 
 	let computedClasses = $derived(
 		cn(
+			'ecmc',
+			'ecmc-container',
 			paddingClasses[padding],
 			fill ? 'container--fill' : '',
 			bg ? 'container--bg' : '',
@@ -78,27 +93,27 @@
 
 <style>
 	.container--padding-none {
-		padding: var(--spacing-none);
+		padding: var(--ecmc-spacing-none);
 	}
 
 	.container--padding-xsm {
-		padding: var(--spacing-xsm);
+		padding: var(--ecmc-spacing-xsm);
 	}
 
 	.container--padding-sm {
-		padding: var(--spacing-sm);
+		padding: var(--ecmc-spacing-sm);
 	}
 
 	.container--padding-md {
-		padding: var(--spacing-md);
+		padding: var(--ecmc-spacing-md);
 	}
 
 	.container--padding-lg {
-		padding: var(--spacing-lg);
+		padding: var(--ecmc-spacing-lg);
 	}
 
 	.container--padding-xl {
-		padding: var(--spacing-xl);
+		padding: var(--ecmc-spacing-xl);
 	}
 
 	.container--fill {
@@ -107,10 +122,10 @@
 	}
 
 	.container--bg {
-		background-color: light-dark(var(--neutral-200), var(--neutral-800));
+		background-color: light-dark(var(--ecmc-neutral-200), var(--ecmc-neutral-800));
 	}
 
 	.container--rounding {
-		border-radius: var(--rounding-size-1);
+		border-radius: var(--ecmc-rounding-size-1);
 	}
 </style>

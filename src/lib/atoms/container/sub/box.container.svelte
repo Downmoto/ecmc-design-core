@@ -20,7 +20,7 @@
 <Container bind:metrics {...containerProps}>
 	<div
 		class="box"
-		style="gap: var(--spacing-{gap}); align-items: {align}; justify-content: {justify}; flex-wrap: {flexWrap}; flex-direction: {flexDirection};"
+		style="gap: var(--ecmc-spacing-{gap}); align-items: {align}; justify-content: {justify}; flex-wrap: {flexWrap}; flex-direction: {flexDirection};"
 	>
 		{@render children?.()}
 	</div>

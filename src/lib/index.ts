@@ -1,5 +1,5 @@
 // Reexport your entry components here
-
+import './utils/ecmc.css'
 // Atoms
 export { default as Container } from './atoms/container/Container.svelte';
 export type { ContainerProps, ContainerMetrics } from './atoms/container/types.js';

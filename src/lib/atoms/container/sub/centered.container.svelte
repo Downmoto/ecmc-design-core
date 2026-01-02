@@ -1,3 +1,15 @@
+<!--
+	@component
+	# Centered
+	
+	A container component that centers content horizontally and/or vertically using flexbox.
+	
+	@param {Snippet} [children] - The content to be rendered inside the centered container
+	@param {boolean} [horizontal=true] - Whether to center content horizontally
+	@param {boolean} [vertical=true] - Whether to center content vertically
+	@param {ContainerMetrics} [metrics] - Bindable prop to track real-time container element metrics
+	@param {ContainerProps} [...containerProps] - All standard Container props (padding, fill, bg, rounding, etc.)
+-->
 <script lang="ts">
 	import Container from '../Container.svelte';
 	import type { CenteredProps } from '../types.js';

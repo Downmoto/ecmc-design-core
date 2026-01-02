@@ -1,3 +1,17 @@
+<!--
+	@component
+	# Input
+	
+	A form input field with label support, multiple input types, and responsive label positioning.
+	Automatically repositions labels on small screens (< 640px) for better mobile UX.
+	
+	@param {'text' | 'email' | 'password'} [type='text'] - Type of input field: 'text' (standard), 'email' (with validation), 'password' (masked characters)
+	@param {string} [label=''] - Label text displayed above or beside the input, also used for aria-label accessibility
+	@param {boolean} [labelLeft=false] - Position label to the left (horizontal layout on desktop, automatically reverts to vertical on screens < 640px)
+	@param {string} [placeholder=''] - Placeholder text shown when the input is empty
+	@param {string} value - The current value of the input field (bindable using bind:value)
+	@param {string} [id] - HTML id attribute for the input element, auto-generated from label if not provided
+-->
 <script lang="ts">
 	import { HBox, VBox, Centered } from '$lib/index.js';
 	import Text from '../text/Text.svelte';
@@ -45,31 +59,33 @@
 	/>
 {/snippet}
 
-{#if effectiveLabelLeft}
-	<HBox gap="xsm">
-		{@render contents()}
-	</HBox>
-{:else}
-	<VBox gap="none">
-		{@render contents()}
-	</VBox>
-{/if}
+<div class="ecmc ecmc-input">
+	{#if effectiveLabelLeft}
+		<HBox gap="xsm">
+			{@render contents()}
+		</HBox>
+	{:else}
+		<VBox gap="none">
+			{@render contents()}
+		</VBox>
+	{/if}
+</div>
 
 <style>
 	input {
-		padding: var(--spacing-xsm);
-		background-color: light-dark(var(--neutral-300), var(--neutral-700));
-		border: 1px solid light-dark(var(--neutral-300), var(--neutral-700));
+		padding: var(--ecmc-spacing-xsm);
+		background-color: light-dark(var(--ecmc-neutral-300), var(--ecmc-neutral-700));
+		border: 1px solid light-dark(var(--ecmc-neutral-300), var(--ecmc-neutral-700));
 		outline: none;
 		width: 100%;
 	}
 
 	input::placeholder {
-		color: light-dark(var(--neutral-500), var(--neutral-400));
+		color: light-dark(var(--ecmc-neutral-500), var(--ecmc-neutral-400));
 		opacity: 0.7;
 	}
 
 	input:focus {
-		border-color: light-dark(var(--neutral-900), var(--neutral-300));
+		border-color: light-dark(var(--ecmc-neutral-900), var(--ecmc-neutral-300));
 	}
 </style>
