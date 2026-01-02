@@ -1,7 +1,17 @@
+<!--
+	@component
+	# Button
+	
+	A foundational button component supporting multiple visual variants.
+	
+	@param {Snippet} [children] - The content to be rendered inside the button
+	@param {'primary' | 'secondary' | 'disabled'} [variant='primary'] - Visual variant: 'primary' (main action with --red-500/600/700), 'secondary' (alternative with --neutral-100/300/400), 'disabled' (non-interactive with reduced opacity)
+	@param {(event: MouseEvent) => void} [onclick] - Click handler for button interactions
+-->
 <script lang="ts">
-	import Centered from '$lib/atoms/container/sub/centered.container.svelte';
-	import Text from '$lib/atoms/text/Text.svelte';
 	import { cn } from '../../utils/cn.js';
+	import { Centered, Text } from '$lib/index.js';
+
 	import { buttonVariantClasses, defaultProps } from './constants.js';
 	import type { ButtonProps } from './types.js';
 

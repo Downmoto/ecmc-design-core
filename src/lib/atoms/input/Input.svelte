@@ -1,3 +1,17 @@
+<!--
+	@component
+	# Input
+	
+	A form input field with label support, multiple input types, and responsive label positioning.
+	Automatically repositions labels on small screens (< 640px) for better mobile UX.
+	
+	@param {'text' | 'email' | 'password'} [type='text'] - Type of input field: 'text' (standard), 'email' (with validation), 'password' (masked characters)
+	@param {string} [label=''] - Label text displayed above or beside the input, also used for aria-label accessibility
+	@param {boolean} [labelLeft=false] - Position label to the left (horizontal layout on desktop, automatically reverts to vertical on screens < 640px)
+	@param {string} [placeholder=''] - Placeholder text shown when the input is empty
+	@param {string} value - The current value of the input field (bindable using bind:value)
+	@param {string} [id] - HTML id attribute for the input element, auto-generated from label if not provided
+-->
 <script lang="ts">
 	import { HBox, VBox, Centered } from '$lib/index.js';
 	import Text from '../text/Text.svelte';
